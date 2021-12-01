@@ -5,14 +5,14 @@
     <div class="quoter">
         <div class="container">
             <div class="light-box p-3">
-                <a href="{{ route('home') }}" class="goto-prev-page-link"><i class="bi bi-chevron-left"></i> VOLTAR</a>
+                <a href="{{ route('home') }}" class="goto-prev-page-link"><i class="bi bi-chevron-left"></i> VOLTAR PARA CASA</a>
                 <div class="light-box-header my-4">
                     <div class="title text-center">
                         <h3>COMO PODEMOS AJUDAR VOCÊ?</h3>
                         <p>esponda algumas perguntas para conhecermos você melhor.</p>
                     </div>
                 </div>
-                <div class="light-box-body px-lg-5 pt-lg-4 pt-md-4 pb-5 pt-sm-0">
+                <div class="light-box-body px-lg-5 pt-lg-4 pt-md-4 pt-sm-0 pb-md-5 pb-sm-4 pb-3">
                     <div class="row">
                         <div class="col-lg-6 mb-4 mb-md-3 mb-sm-3">
                             <a href="{{ url('consultoria-servico') }}">
@@ -64,11 +64,3 @@
     </div>
 </div>
 @endsection
-
-@push('scripts')
-<script>
-    (function() {
-       
-    })();
-</script>
-@endpush

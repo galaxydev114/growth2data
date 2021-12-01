@@ -1,8 +1,4 @@
-@extends('layouts.app', ['title' => 'The Information Technology & Services', 'page' => 'home'])
-
-@section('css')
-<link href="{{ asset('vendor') }}/swiper/swiper-bundle.min.css" rel="stylesheet">
-@endsection
+@extends('layouts.app', ['title' => 'The Information Technology & Services', 'page' => 'home', ''])
 
 @section('content')
 <!-- ======= Hero Section ======= -->
@@ -208,6 +204,10 @@
     </div>
 </section><!-- End Clients Section -->
 @endsection
+
+@push('css')
+<link href="{{ asset('vendor') }}/swiper/swiper-bundle.min.css" rel="stylesheet">
+@endpush
 
 @push('scripts')
 <script src="{{ asset('vendor') }}/swiper/swiper-bundle.min.js"></script>

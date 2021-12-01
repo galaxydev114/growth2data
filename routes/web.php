@@ -23,4 +23,4 @@ Route::get('home', function() {
 Route::get('quoter', function () {
     return view('quoter.index');
 })->name('quoter');
-Route::get('consultoria-servico', [QuoterController::class, 'consultancyService']);
+Route::match(['get', 'post'], 'consultoria-servico', [QuoterController::class, 'consultancyService']);

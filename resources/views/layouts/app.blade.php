@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" theme="growth2data-v1">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,7 @@
         <!-- Style CSS -->
         <link href="{{ asset('css') }}/style.css" rel="stylesheet" />
 
-        @yield('css')
+        @stack('css')
     </head>
     <body>
         <!-- Header -->
