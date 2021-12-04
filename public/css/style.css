@@ -268,7 +268,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #0081fe;
+  background: #3264B7;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -1511,6 +1511,39 @@ input[type='radio']:checked + .card-box .card-box-body h5 {
 }
 
 /*--------------------------------------------------------------
+# Goto Home Buttton
+--------------------------------------------------------------*/
+.btn-goto-home {
+  margin-top: 30px;
+  line-height: 0;
+  padding: 10px 45px;
+  border: 1px solid #808CFD;
+  border-radius: 60px;
+  transition: 0.5s;
+  color: #808CFD;
+  background: transparent;
+  /* box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4); */
+}
+.btn-goto-home:hover {
+  background-color: #808CFD;
+  color: #fff;
+}
+.btn-goto-home span {
+  font-family: Inter;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.btn-goto-home i {
+  margin-right: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.btn-goto-home:hover i {
+  transform: translateX(-5px);
+}
+
+/*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
 .outline-btn {
@@ -1580,4 +1613,128 @@ input[type='radio']:checked + .card-box .card-box-body h5 {
 }
 .gm-form-control::placeholder {
   color: #979799;
+}
+
+/*--------------------------------------------------------------
+# MSG Sent
+--------------------------------------------------------------*/
+.msg-sent .msg-sent-body h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 30px;
+  color: #939496;
+}
+.msg-sent .msg-sent-body p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #939496;
+}
+.msg-sent .msg-sent-content .msg-sent-body {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+@media only screen and (max-width: 768px) {
+  .msg-sent .msg-sent-content .msg-sent-body {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .msg-sent .msg-sent-body h3 {
+    font-size: 30px;
+  }
+  .msg-sent .msg-sent-body p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .msg-sent .msg-sent-body h3 {
+    font-size: 25px;
+  }
+  .msg-sent .msg-sent-body p {
+    font-size: 13px;
+  }
+  .msg-sent {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+/*---------------------------------------------------------
+# Schools
+-----------------------------------------------------------*/
+.schools .school-card {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 13%);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+.schools .school-card:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
+  -webkit-transform: translate3d(0, .25em, 0);
+  transform: translate3d(0, .25em, 0);
+}
+.schools .school-card h3 {
+  font-weight: bold;
+  color: #717177;
+}
+
+/*--------------------------------------------------------------
+# Contact Page Style
+--------------------------------------------------------------*/
+#contact {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.or-horizontal-divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  line-height: .1em;
+  font-weight: 300;
+}
+.or-horizontal-divider span {
+  padding: 0 10px;
+  background: #fff;
+  color: #606060;
+}
+
+.info-box {
+  padding: 10px 15px;
+  border: 1px solid #939496;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+.info-box i {
+  font-size: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  color: #808CFD;
+}
+.info-box h3 {
+  font-size: 17px;
+  display: inline-block;
+  color: #939496;
+}
+.info-box a {
+  color: #1A1A1A;
+  display: block;
+}
+.info-box a:hover {
+  text-decoration: underline;
+}
+.contact-right-section {
+  border-left: 1px solid #939496;
+}
+@media only screen and (max-width: 992px) {
+  .contact-right-section {
+    border-left: none;
+    margin-top: 3rem;
+  }
 }

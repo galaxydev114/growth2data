@@ -25,7 +25,7 @@
                 </li>
                 <li><a class="nav-link scrollto" href="#">Blog</a></li>
                 <li><a href="#about">Sobre a G2D</a></li>
-                <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
+                <li><a class="nav-link scrollto" href="{{ route('contact') }}">Contato</a></li>
                 <li><a class="login-btn scrollto" href="#about">Log In</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>

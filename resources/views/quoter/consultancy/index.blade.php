@@ -30,7 +30,6 @@
                 </div>
                 <form method="post" action="{{ url('consultoria-servico') }}">
                     @csrf
-                    <input type="hidden" name="serviceType" value="consultancy" />
                     <div id="interest" role="stepForm">
                         <div class="light-box-body px-lg-5 pt-lg-4 pt-md-4 pt-sm-0 pb-md-5 pb-sm-4 pb-3">
                             <div class="row">
@@ -193,13 +192,13 @@
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="appServiceType" />
+                                                        <input type="radio" name="app_service_type" value="1" />
                                                         <span>Sim, preciso apenas que seja desenvolvido!</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="appServiceType" />
+                                                        <input type="radio" name="app_service_type" value="2" />
                                                         <span>Não, preciso de ajuda para elaborá-la!</span>
                                                     </label>
                                                 </li>
@@ -331,7 +330,7 @@
                     </div>
                     <div class="light-box-footer">
                         <div class="text-center mt-lg-3 mb-3">
-                            <button type="button" id="prev" class="btn outline-btn primary me-3">VOLTAR</button>
+                            <button type="button" id="prev" class="btn outline-btn primary me-3 d-none">VOLTAR</button>
                             <button type="button" id="next" class="btn outline-btn primary">PRÓXIMA</button>
                             <button type="submit" id="submit" class="btn outline-btn primary d-none"><span class="bs-spinner spinner-border spinner-border-sm d-none"></span>ENVIAR</button>
                         </div>
@@ -516,7 +515,7 @@
                     $('#profile .form-message').addClass('d-none');
                 }
             } else if (stepForm === 'app') {
-                if ($('[name="appServiceType"]:checked').length === 0) {
+                if ($('[name="app_service_type"]:checked').length === 0) {
                     invalids++;
                     $('#app .form-message').removeClass('d-none');
                 } else {
@@ -533,23 +532,23 @@
                 showEls = [];
 
             if (step === 'interest') {
-                hideEls = ['.title h4', '#contact-detail-form-title', '#profile-title', '[role="stepForm"]', '#submit'];
+                hideEls = ['.title h4', '#contact-detail-form-title', '#profile-title', '[role="stepForm"]', '#submit', '#prev'];
                 showEls = ['#main-title', '#interest', '.increase-icon', '#next'];
             } else if (step === 'bi-q') {
                 hideEls = ['.title h4', '#contact-detail-form-title', '#profile-title', '[role="stepForm"]', '#submit'];
-                showEls = ['#main-title', '#bi-q-title', '#serviceQuestion', '.increase-icon', '#next'];
+                showEls = ['#main-title', '#bi-q-title', '#serviceQuestion', '.increase-icon', '#next', '#prev'];
             } else if (step === 'bd-q') {
                 hideEls = ['.title h4', '#contact-detail-form-title', '#profile-title', '[role="stepForm"]', '#submit'];
-                showEls = ['#main-title', '#bd-q-title', '#serviceQuestion', '.increase-icon', '#next'];
+                showEls = ['#main-title', '#bd-q-title', '#serviceQuestion', '.increase-icon', '#next', '#prev'];
             } else if (step === 'app-q') {
                 hideEls = ['.title h4', '#contact-detail-form-title', '#profile-title', '[role="stepForm"]', '#submit'];
-                showEls = ['#main-title', '#app-q-title', '#app', '.increase-icon', '#next'];
+                showEls = ['#main-title', '#app-q-title', '#app', '.increase-icon', '#next', '#prev'];
             } else if (step === 'final') {
                 hideEls = ['.title h4', '#main-title', '.increase-icon', '#profile-title', '[role="stepForm"]', '#next'];
-                showEls = ['#contact-detail-form-title', '#contactDetail', '#submit'];
+                showEls = ['#contact-detail-form-title', '#contactDetail', '#submit', '#prev'];
             } else if (step === 'bi-profile' || step === 'bd-profile') {
                 hideEls = ['.title h4', '#main-title', '#contact-detail-form-title', '.increase-icon', '[role="stepForm"]', '#submit'];
-                showEls = ['#profile-title', '#profile', '#next'];
+                showEls = ['#profile-title', '#profile', '#next', '#prev'];
             }
 
             hideEls.forEach(function(hideEl) {

@@ -26,7 +26,7 @@ class CreateConsultanciesTable extends Migration
             $table->string('data_sources_amt', 10)->nullable();
             $table->boolean('data_engineering_help')->nullable();
             $table->enum('dashboard_type', ['Ferramentas de tomada de decisões', 'Estilo alerta', 'Insights automáticos', 'Tabelas de texto'])->nullable();;
-            $table->boolean('app_service_type')->nullable();
+            $table->tinyInteger('app_service_type')->nullable();
             $table->timestamps();
         });
     }

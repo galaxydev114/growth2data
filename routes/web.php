@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Quoter\ConsultancyController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,5 +34,15 @@ Route::get('msg-enviada', function () {
 Route::get('quoter', function () {
     return view('quoter.index');
 })->name('quoter');
+
 Route::get('consultoria-servico', [ConsultancyController::class, 'index']);
 Route::post('consultoria-servico', [ConsultancyController::class, 'save']);
+
+Route::get('escola', function () {
+    return view('quoter.school.index');
+})->name('school');
+
+/*-------------------------------------------------------------------------------
+# Contact Routes
+--------------------------------------------------------------------------------*/
+Route::get('contato', [ContactController::class, 'index'])->name('contact');

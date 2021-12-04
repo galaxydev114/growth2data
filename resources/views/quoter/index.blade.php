@@ -35,7 +35,7 @@
                             </a>
                         </div>
                         <div class="col-lg-6 mb-4 mb-md-3 mb-sm-3">
-                            <a href="">
+                            <a href="{{ route('school') }}">
                                 <div class="quoter-school quoter-item mx-xl-3">
                                     <div class="quoter-school-content quoter-item-content">
                                         <div class="quoter-school-header mb-3 text-end">

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'The Information Technology & Services', 'page' => 'home', ''])
+@extends('layouts.app', ['title' => 'The Information Technology & Services', 'page' => 'home'])
 
 @section('content')
 <!-- ======= Hero Section ======= -->
