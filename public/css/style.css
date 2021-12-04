@@ -1400,6 +1400,17 @@ section {
   padding-top: 0;
 }
 
+.contact-detail-form .gm-form-group {
+  margin-top: .7rem;
+  margin-bottom: .7rem;
+}
+@media only screen and (max-width: 576px) {
+  .contact-detail-form {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
 .consultancy-profile .card-box {
   background: #F2F2F2;
   padding: 1rem;
@@ -1533,9 +1544,11 @@ input[type='radio']:checked + .card-box .card-box-body h5 {
 }
 .error {
   /* color: #dc3545; */
-  color: #842029;
+  color: #EA5455;
   width: 100%;
-  text-align: center;
+}
+.invalid {
+  border-color: #EA5455 !important;
 }
 .gm-form-group label {
   font-family: Inter;

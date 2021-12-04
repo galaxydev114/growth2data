@@ -22,7 +22,7 @@
         <!-- Style CSS -->
         <link href="{{ asset('css') }}/style.css" rel="stylesheet" />
 
-        @yield('css')
+        @stack('css')
     </head>
     <body>
         <!-- ======== Header ======= -->

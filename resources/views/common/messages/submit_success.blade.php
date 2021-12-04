@@ -1,4 +1,4 @@
-@extends('layouts.simple_app', ['title' => 'Consultoria Serviço', 'page' => 'consultanty_service'])
+@extends('layouts.simple_app', ['title' => 'Submetido com sucesso!', 'page' => 'success_submitted'])
 
 @section('content')
 <div class="gradient-primary-wrap" style="min-height: 100vh">
@@ -20,7 +20,7 @@
                         <h4 id="app-q-title" class="d-none">Aplicativo</h4>
                         <div id="contact-detail-form-title" class="d-none">
                             <h3>Seus dados para contato</h3>
-                            <h4>Estamos quase lá!</h4>
+                            <h5>Estamos quase lá!</h5>
                         </div>
                         <div id="profile-title" class="d-none">
                             <h3>Desenvolvimento de Dashboards</h3>
@@ -99,71 +99,71 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="service-item" data-alias="qDashboardsAmt">
+                                        <div class="service-item" data-alias="dashboards_amt">
                                             <h4 class="text-center">Quantos dashboards você precisa desenvolver?</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDashboardsAmt" value="1-3" />
+                                                        <input type="radio" name="dashboards_amt" value="1-3" />
                                                         <span>1 a 3</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDashboardsAmt" value="4-10" />
+                                                        <input type="radio" name="dashboards_amt" value="4-10" />
                                                         <span>4 a 10</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDashboardsAmt" value="10+" />
+                                                        <input type="radio" name="dashboards_amt" value="10+" />
                                                         <span>10+</span>
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="error d-none">O campo é obrigatório.</div>
+                                            <div class="error text-center d-none">O campo é obrigatório.</div>
                                         </div>
-                                        <div class="service-item" data-alias="qDataSourcesAmt">
+                                        <div class="service-item" data-alias="data_sources_amt">
                                             <h4 class="text-center">Quantas fontes de dados você tem?</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDataSourcesAmt" value="1" />
+                                                        <input type="radio" name="data_sources_amt" value="1" />
                                                         <span>1</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDataSourcesAmt" value="2-3" />
+                                                        <input type="radio" name="data_sources_amt" value="2-3" />
                                                         <span>2 a 3</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDataSourcesAmt" value="4+" />
+                                                        <input type="radio" name="data_sources_amt" value="4+" />
                                                         <span>4+</span>
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="error d-none">O campo é obrigatório.</div>
+                                            <div class="error text-center d-none">O campo é obrigatório.</div>
                                         </div>
-                                        <div class="service-item" data-alias="qDataEngineering">
+                                        <div class="service-item" data-alias="data_engineering_amt">
                                             <h4 class="text-center">Você precisa de ajuda com a engenharia dos dados?</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDataEngineering" value="yes" />
+                                                        <input type="radio" name="data_engineering_amt" value="yes" />
                                                         <span>Sim</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="qDataEngineering" value="no" />
+                                                        <input type="radio" name="data_engineering_amt" value="no" />
                                                         <span>Não</span>
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="error d-none">O campo é obrigatório.</div>
+                                            <div class="error text-center d-none">O campo é obrigatório.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,13 +193,13 @@
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="appIdea" />
+                                                        <input type="radio" name="appServiceType" />
                                                         <span>Sim, preciso apenas que seja desenvolvido!</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
-                                                        <input type="radio" name="appIdea" />
+                                                        <input type="radio" name="appServiceType" />
                                                         <span>Não, preciso de ajuda para elaborá-la!</span>
                                                     </label>
                                                 </li>
@@ -230,7 +230,7 @@
                                 <div class="col-lg-6">
                                     <div class="gm-form-group">
                                         <label for="email">E-mail</label>
-                                        <input type="text" name="email" id="email" class="gm-form-control" />
+                                        <input type="email" name="email" id="email" class="gm-form-control" />
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -272,7 +272,7 @@
                             <div class="row pt-4">
                                 <div class="col-lg-6">
                                     <label for="radio_1">
-                                        <input type="radio" name="dashboardType" id="radio_1" hidden />
+                                        <input type="radio" name="dashboard_type" id="radio_1" value="1" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
                                                 <h5>Inteligente, prescritivo e prefere pistas visuais.</h5>
@@ -286,7 +286,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="radio_2">
-                                        <input type="radio" name="dashboardType" id="radio_2" hidden />
+                                        <input type="radio" name="dashboard_type" id="radio_2" value="2" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
                                                 <h5>Previdente, tático, confiante.</h5>
@@ -300,7 +300,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="radio_3">
-                                        <input type="radio" name="dashboardType" id="radio_3" hidden />
+                                        <input type="radio" name="dashboard_type" id="radio_3" value="3" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
                                                 <h5>Descritivo, minimalista, social.</h5>
@@ -314,7 +314,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="radio_4">
-                                        <input type="radio" name="dashboardType" id="radio_4" hidden />
+                                        <input type="radio" name="dashboard_type" id="radio_4" value="4" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
                                                 <h5>Confiável, simples, honesto.</h5>
@@ -331,8 +331,9 @@
                     </div>
                     <div class="light-box-footer">
                         <div class="text-center mt-lg-3 mb-3">
-                            <button type="button" id="prev" class="btn outline-btn primary">VOLTAR</button>
+                            <button type="button" id="prev" class="btn outline-btn primary me-3">VOLTAR</button>
                             <button type="button" id="next" class="btn outline-btn primary">PRÓXIMA</button>
+                            <button type="submit" id="submit" class="btn outline-btn primary d-none"><span class="bs-spinner spinner-border spinner-border-sm d-none"></span>ENVIAR</button>
                         </div>
                     </div>
                 </form>
@@ -341,139 +342,3 @@
     </div>
 </div>
 @endsection
-
-@push('scripts')
-<script src="{{ asset('js') }}/jquery-3.6.0.min.js"></script>
-<script>
-    $(function() {
-        var sourceStep = '';
-        var targetStep = '';
-
-        $('#next').on('click', function() {
-            if (sourceStep === '' && targetStep === '') {
-                if (validateStepForm('interest')) {
-                    var interest = $('[name="interest"]:checked').val();
-                    if (interest == 1) {
-                        targetStep = 'bi-profile';
-                        openStep('bi-q');
-                    } else if (interest == 2) {
-                        targetStep = 'bd-profile';
-                        openStep('bd-q');
-                    } else if (interest == 3) {
-                        targetStep = '';
-                        openStep('app-q');
-                    } else if (interest == 4) {
-                        targetStep = '';
-                        openStep('final');
-                    }
-                    sourceStep = 'interest';
-                }
-            } else if (sourceStep === 'interest' && targetStep === 'bi-profile') {
-                if (validateStepForm('bi-q')) {
-                    openStep('bi-profile');
-                    sourceStep = 'bi-q';
-                    targetStep = 'final';
-                }
-            } else if (sourceStep === 'interest' && targetStep === 'bd-profile') {
-                if (validateStepForm('bd-q')) {
-                    openStep('bd-profile');
-                    sourceStep = 'bd-q';
-                    targetStep = 'final';
-                }
-            } else if (sourceStep === 'bi-q' && targetStep === 'final') {
-                if (validateStepForm('profile')) {
-                    openStep('final');
-                    sourceStep = 'bi-profile';
-                    targetStep = '';
-                }
-            } else if (sourceStep === 'bd-q' && targetStep === 'final') {
-                if (validateStepForm('profile')) {
-                    openStep('final');
-                    sourceStep = 'bd-profile';
-                    targetStep = '';
-                }
-            }
-        });
-
-        // returning to prev page
-        $('#prev').on('click', function() {
-            if (sourceStep === 'interest') {
-                openStep('interest');
-                sourceStep = '';
-            }
-        });
-        
-
-        // validate each step form
-        function validateStepForm(stepForm) {
-            var invalids = 0;
-            
-            // interest form validation
-            if (stepForm === 'interest') {
-                if ($('[name="interest"]:checked').length === 0) {
-                    invalids++;
-                    $('#interest .form-message').removeClass('d-none');
-                } else {
-                    $('#interest .form-message').addClass('d-none');
-                }
-            } else if (stepForm === 'bi-q' || stepForm === 'bd-q') {
-                var inputs = ['qDashboardsAmt', 'qDataSourcesAmt', 'qDataEngineering'];
-                inputs.forEach(function(input) {
-                    if ($(`[name="${input}"]:checked`).length === 0) {
-                        invalids++;
-                        $(`#serviceQuestion .form-message, [data-alias="${input}"] .error`).removeClass('d-none');
-                    } else {
-                        $(`[data-alias="${input}"] .error`).addClass('d-none');
-                    }
-                });
-
-                if (invalids === 0) {
-                    $('#serviceQuestion .form-message').addClass('d-none');
-                }
-            } else if (stepForm === 'profile') {
-                if ($('[name="dashboardType"]:checked').length === 0) {
-                    invalids++;
-                    $('#interest .form-message').removeClass('d-none');
-                } else {
-                    $('#interest .form-message').addClass('d-none');
-                }
-            }
-
-            return !invalids;
-        }
-
-        // function to continue steps
-        function openStep(step) {
-            var hideEls = [],
-                showEls = [];
-
-            if (step === 'interest') {
-                hideEls = ['.title h4', '#contact-detail-form-title', '[role="stepForm"]'];
-                showEls = ['#main-title', '#interest', '.increase-icon'];
-            } else if (step === 'bi-q') {
-                hideEls = ['.title h4', '#contact-detail-form-title', '[role="stepForm"]'];
-                showEls = ['#main-title', '#bi-q-title', '#serviceQuestion', '.increase-icon'];
-            } else if (step === 'bd-q') {
-                hideEls = ['.title h4', '#contact-detail-form-title', '[role="stepForm"]'];
-                showEls = ['#main-title', '#bd-q-title', '#serviceQuestion', '.increase-icon'];
-            } else if (step === 'app-q') {
-                hideEls = ['.title h4', '#contact-detail-form-title', '[role="stepForm"]'];
-                showEls = ['#main-title', '#app-q-title', '#app', '.increase-icon'];
-            } else if (step === 'final') {
-                hideEls = ['.title h4', '#main-title', 'increase-icon', '[role="stepForm"]'];
-                showEls = ['#contact-detail-form-title', '#contactDetail'];
-            } else if (step === 'bi-profile') {
-                hideEls = ['.title h4', '#main-title', 'increase-icon', '[role="stepForm"]'];
-                showEls = ['#contact-detail-form-title', '#contactDetail'];
-            }
-
-            hideEls.forEach(function(hideEl) {
-                $(hideEl).addClass('d-none');
-            });
-            showEls.forEach(function(showEl) {
-                $(showEl).removeClass('d-none');
-            });
-        }
-    });
-</script>
-@endpush

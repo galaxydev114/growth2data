@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\QuoterController;
+use App\Http\Controllers\Quoter\ConsultancyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,18 @@ Route::get('home', function() {
 	return redirect('/');
 });
 
+/*-------------------------------------------------------------------------------
+# Common Pages
+--------------------------------------------------------------------------------*/
+Route::get('msg-enviada', function () {
+    return view('common.messages.submit_success');
+})->name('messages.submit.success');
+
+/*-------------------------------------------------------------------------------
+# Quoter Routes
+--------------------------------------------------------------------------------*/
 Route::get('quoter', function () {
     return view('quoter.index');
 })->name('quoter');
-Route::match(['get', 'post'], 'consultoria-servico', [QuoterController::class, 'consultancyService']);
+Route::get('consultoria-servico', [ConsultancyController::class, 'index']);
+Route::post('consultoria-servico', [ConsultancyController::class, 'save']);
