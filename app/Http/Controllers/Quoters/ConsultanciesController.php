@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Quoter;
+namespace App\Http\Controllers\Quoters;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ConsultanciesRequest;
