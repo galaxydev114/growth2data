@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,600|Mulish:400,500,600,700,800");
+body {
+  font-family: Mulish;
+}
+
+/* auth */
+.auth-title {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: #252733;
+}
+
+.logo-light .logo-lg .brand-text {
+  color: #fff;
+  letter-spacing: 0.4px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 19px;
+  vertical-align: middle;
+  margin-left: 10px;
+  opacity: .7;
+}
+
+.metismenu li.mm-active {
+  opacity: .7;
+}
+
+#sidebar-menu ul li a {
+  font-size: 15px;
+}
+
+body[data-sidebar=dark] #sidebar-menu ul li a:hover {
+  color: #fff;
+  opacity: .7;
+}
+
+.navbar-brand-box {
+  padding: 0;
+}
+@media (max-width: 992px) {
+  .logo span.logo-sm {
+      display: inline-block;
+  }
+  .navbar-brand-box {
+    padding: 0 1.5rem;
+  }
+}
+
+#dashboard .nav-pills.trafic-period .nav-link.active {
+  color: #5b626b;
+  background-color: #EFF3F9;
+}
+
+#dashboard .nav-pills.trafic-type .nav-link {
+  border: 0.7px solid rgba(62, 64, 73, 0.67);
+  border-radius: 0;
+  box-sizing: border-box;
+}
+/* #dashboard .nav-pills.trafic-type .nav-item:first-child .nav-link {
+  border-top-left-radius: 5px;
+}
+#dashboard .nav-pills.trafic-type .nav-item:last-child .nav-link {
+  border-top-right-radius: 5px;
+} */
+#dashboard .nav-pills.trafic-type .nav-link.active {
+  background-color: #EFF3F9;
+  color: #5b626b;
+  border: none;
+  border-bottom: 3px solid rgba(62, 64, 73, 0.67);
+  padding: 0.495rem 1rem;
+}
+
+.info-card {
+  box-sizing: border-box;
+}
+.info-card .info-card-header {
+  border: 1px solid #BEBFC2;
+}
+.info-card .info-card-header h5 {
+  margin-bottom: 0;
+}
+.info-card .info-card-body {
+  border: 1px solid #BEBFC2;
+  min-height: 137px;
+}
+.info-card-header {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5rem 0;
+}

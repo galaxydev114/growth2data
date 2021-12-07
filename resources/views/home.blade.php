@@ -2,25 +2,23 @@
 
 @section('content')
 <!-- ======= Hero Section ======= -->
-<div class="gradient-primary-wrap">
+<div class="gradient-primary">
     <section id="hero" class="hero d-flex align-items-center">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="{{ asset('img') }}/hero-img.png" class="img-fluid" alt="Hero Img" />
-                </div>
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <div class="hero-right-content ps-lg-5 text-lg-start text-md-center">
+                    <div class="hero-left-content pt-md-4 text-left">
                         <h1 data-aos="fade-up">Consultoria em Business Intelligence, Big Data, Soluções Digitais e Treinamentos</h1>
                         <h2 data-aos="fade-up" data-aos-delay="400">Temos a solução mais inteligente para você e para seu negócio</h2>
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <div class="text-center text-lg-start">
-                                <a href="{{ route('quoter') }}" class="gx-animation-pulse-grow btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                    <span>ENCONTRE O QUE PRECISA</span>
-                                </a>
-                            </div>
+                            <a href="{{ route('quoter') }}" class="gx-animation-pulse-grow btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                <span>ENCONTRE O QUE PRECISA</span>
+                            </a>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="{{ asset('img') }}/hero-img.png" class="img-fluid" alt="Hero Img" />
                 </div>
             </div>
         </div>

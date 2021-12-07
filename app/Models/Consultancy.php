@@ -26,6 +26,6 @@ class Consultancy extends Model
         'data_sources_amt',
         'data_engineering_help',
         'dashboard_type',
-        'app_service_type'
+        'app_service_type',
     ];
 }

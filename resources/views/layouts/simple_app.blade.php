@@ -19,6 +19,7 @@
         <!-- Vendor CSS Files -->
         <link href="{{ asset('vendor') }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
         <link href="{{ asset('vendor') }}/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+        <link href="{{ asset('vendor') }}/aos/aos.css" rel="stylesheet" />
         <!-- Style CSS -->
         <link href="{{ asset('css') }}/style.css" rel="stylesheet" />
 
@@ -51,7 +52,7 @@
                                     <li>|</li>
                                     <li><a href="#">Cookies</a></li>
                                     <li>|</li>
-                                    <li><a href="#">&copy; 2021, Growth2data, Inc. Todos direitos reservados.</a></li>
+                                    <li><a href="#">&copy; <script>document.write(new Date().getFullYear())</script>, Growth2data, Inc. Todos direitos reservados.</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown language-switch float-end">
@@ -70,7 +71,34 @@
 
         <!-- Vendor JS Files -->
         <script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.js"></script>
+        <!-- AOS JS -->
+        <script src="{{ asset('vendor') }}/aos/aos.js"></script>
+        
+        <script>
+            //===== Prealoder
+            window.onload = function () {
+                // preloader fadeout onload
+                var preloader = document.querySelector('.preloader');
+                if (preloader) {
+                    document.querySelector('.preloader').style.opacity = '0';
+                    document.querySelector('.preloader').style.display = 'none';
+                }
+            }
 
-        @stack('scripts')
+            /**
+             * Animation on scroll
+             */
+            function aos_init() {
+                AOS.init({
+                    duration: 1000,
+                    easing: "ease-in-out",
+                    once: true,
+                    mirror: false
+                });
+            }
+            window.addEventListener('load', () => {
+                aos_init();
+            });
+        </script>
     </body>
 </html>

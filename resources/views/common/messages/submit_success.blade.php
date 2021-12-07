@@ -1,7 +1,7 @@
 @extends('layouts.simple_app', ['title' => 'Submetido com sucesso!', 'page' => 'success_submitted'])
 
 @section('content')
-<div class="gradient-primary-wrap" style="min-height: 100vh">
+<div class="gradient-primary" style="min-height: 100vh">
     <div class="consultancy-service">
         <div class="container">
             <div class="light-box p-3">

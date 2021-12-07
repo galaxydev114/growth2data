@@ -6,12 +6,12 @@
     "use strict";
 
     //===== Prealoder
-
     window.onload = function () {
         // preloader fadeout onload
         var preloader = document.querySelector('.preloader');
         if (preloader) {
-            document.querySelector('.preloader').classList.add("loader-fadeout");
+            document.querySelector('.preloader').style.opacity = '0';
+            document.querySelector('.preloader').style.display = 'none';
         }
     }
 

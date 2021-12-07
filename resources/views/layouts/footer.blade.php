@@ -14,18 +14,18 @@
                 <div class="col-lg-3 col-md-4 col-sm-12 footer-links">
                     <h4>Escola</h4>
                     <ul>
-                        <li><a href="#">Treinamento Power BI</a></li>
-                        <li><a href="#">Treinamento Tableau</a></li>
-                        <li><a href="#">PTreinamento  Python</a></li>
-                        <li><a href="#">Treinamento  SQL</a></li>
+                        <li><a href="{{ route('school.pbi') }}">Treinamento Power BI</a></li>
+                        <li><a href="{{ route('school.tableau') }}">Treinamento Tableau</a></li>
+                        <li><a href="{{ route('school.python') }}">PTreinamento  Python</a></li>
+                        <li><a href="{{ route('school.sql') }}">Treinamento  SQL</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-612 footer-links">
                     <h4>G2D</h4>
                     <ul>
-                        <li><a href="#">Sobre a G2D</a></li>
+                        <li><a href="{{ route('about') }}">Sobre a G2D</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="{{ route('contact') }}">Contato</a></li>
                         <li><a href="#">Clube de Conteúdo</a></li>
                     </ul>
                 </div>
@@ -71,7 +71,7 @@
                             <li>|</li>
                             <li><a href="#">Cookies</a></li>
                             <li>|</li>
-                            <li><a href="#">&copy; 2021, Growth2data, Inc. Todos direitos reservados.</a></li>
+                            <li><a href="#">&copy; <script>document.write(new Date().getFullYear())</script>, Growth2data, Inc. Todos direitos reservados.</a></li>
                         </ul>
                     </div>
                 </div>
