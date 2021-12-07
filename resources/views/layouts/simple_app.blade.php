@@ -100,5 +100,7 @@
                 aos_init();
             });
         </script>
+
+        @stack('scripts')
     </body>
 </html>

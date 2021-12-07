@@ -355,6 +355,7 @@
         var targetStep = '';
 
         $('#next').on('click', function() {
+            console.log('www')
             if (sourceStep === '' && targetStep === '') {
                 if (validateStepForm('interest')) {
                     var interest = $('[name="interest"]:checked').val();
