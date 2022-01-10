@@ -69,6 +69,8 @@
             </div>
         </footer><!-- End Footer -->
 
+        <!-- jQuery -->
+        <script src="{{ asset('js') }}/jquery-3.6.0.min.js"></script>
         <!-- Vendor JS Files -->
         <script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.js"></script>
         <!-- AOS JS -->
@@ -101,6 +103,6 @@
             });
         </script>
 
-        @stack('scripts')
+        @stack('js')
     </body>
 </html>

@@ -31,7 +31,7 @@
                                 <h5 data-aos="fade-down" data-aos-delay="300"><b>Duração:</b> 12 horas</h5>
                             </div>
                             <div data-aos="fade-down" data-aos-delay="200">
-                                <a href="" class="getstarted-course-btn">Comece um curso</a>
+                                <a href="javascript:;" class="getstarted-course-btn" data-bs-toggle="modal" data-bs-target="#schoolJoinTypeModal">Comece um curso</a>
                             </div>
                         </div>
                         <div class="col-lg-8 text-end">
@@ -118,4 +118,56 @@
         </div>
     </div>
 </div>
+
+<!-- School Join Type Modal -->
+<div class="modal fade" id="schoolJoinTypeModal" tabindex="-1" aria-labelledby="schoolJoinTypeModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="mt-5 text-center">
+            <h6>Você procura treinamento para você ou para a sua empresa?</h6>
+            <ul class="list-unstyled d-flex flex-wrap justify-content-center">
+                <li>
+                    <label class="color-radio primary">
+                        <input type="radio" name="for_who" id="mysql" />
+                        <span>Eu mesmo</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="color-radio primary">
+                        <input type="radio" name="for_who" id="company" />
+                        <span>Minha compania</span>
+                    </label>
+                </li>
+            </ul>
+            <button type="button" id="next" class="btn outline-btn primary mt-3">PRÓXIMA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
+
+@push('css')
+<style>
+    #schoolJoinTypeModal .modal-body h6 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #939496;
+    }
+</style>
+@endpush
+
+@push('js')
+<script>
+    $('#next').on('click', function () {
+        if ($('#myself').is(':checked')) {
+            window.location.href = "";
+        } else if ($('#company').is(':checked')) {
+            window.location.href = "{{ url('escola/questionario', request()->segment('2')) }}";
+        }
+    });
+</script>
+@endpush

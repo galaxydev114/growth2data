@@ -42,6 +42,6 @@
         <!-- Init JS -->
         <script src="{{ asset('js') }}/init.js"></script>
 
-        @stack('scripts')
+        @stack('js')
     </body>
 </html>

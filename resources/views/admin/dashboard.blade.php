@@ -333,7 +333,7 @@
 </div>
 @endsection
 
-@push('scripts')
+@push('js')
 <!--Morris Chart-->
 <script src="{{ asset('admin-assets/libs') }}/chart.js/Chart.bundle.min.js"></script>
 

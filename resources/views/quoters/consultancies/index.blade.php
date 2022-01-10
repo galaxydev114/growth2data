@@ -346,8 +346,7 @@
 <link href="{{ asset('vendor') }}/form-validation/form-validation.min.css" rel="stylesheet" />
 @endpush
 
-@push('scripts')
-<script src="{{ asset('js') }}/jquery-3.6.0.min.js"></script>
+@push('js')
 <script src="{{ asset('vendor') }}/form-validation/jquery.validate.min.js"></script>
 <script>
     $(function() {
@@ -355,7 +354,6 @@
         var targetStep = '';
 
         $('#next').on('click', function() {
-            console.log('www')
             if (sourceStep === '' && targetStep === '') {
                 if (validateStepForm('interest')) {
                     var interest = $('[name="interest"]:checked').val();

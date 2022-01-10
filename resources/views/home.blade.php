@@ -207,7 +207,7 @@
 <link href="{{ asset('vendor') }}/swiper/swiper-bundle.min.css" rel="stylesheet">
 @endpush
 
-@push('scripts')
+@push('js')
 <script src="{{ asset('vendor') }}/swiper/swiper-bundle.min.js"></script>
 <script>
     (function() {

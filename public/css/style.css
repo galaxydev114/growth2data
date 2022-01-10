@@ -2245,3 +2245,29 @@ input[type='radio']:checked + .card-box .card-box-body h5 {
 #subscription-plan .btn-buy:hover {
   opacity: 0.9;
 }
+
+.question-school .heading-title h4 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #939496;
+}
+.question-school-option ul {
+  padding-top: 0.1rem;
+  padding-bottom: 0.3rem;
+}
+.question-school-option ul li {
+  padding: 0.1rem 1.5rem 0.2rem 1.5rem;
+}
+@media only screen and (max-width: 576px) {
+  .question-school {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+.quoter-question-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #939496;
+}

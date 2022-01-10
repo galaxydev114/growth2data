@@ -65,6 +65,10 @@ Route::prefix('escola')->group(function() {
     Route::get('sql-escola', function() {
         return view('quoters.schools.sql_school');
     })->name('school.sql');
+
+    Route::get('questionario/{school}', function() {
+        return view('quoters.schools.school_questions');
+    });
 });
 
 /*-------------------------------------------------------------------------------
