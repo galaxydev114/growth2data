@@ -15,7 +15,7 @@
                                     <div class="text-center">
                                         <a href="{{ route('home') }}" class="btn-goto-home scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                                             <i class="bi bi-arrow-left"></i>
-                                            <span>Ir para casa</span>
+                                            <span>Voltar para a página inicial</span>
                                         </a>
                                     </div>
                                 </div>
