@@ -155,4 +155,9 @@ return [
 
     'attributes' => [],
 
+    'fill_form' => 'Please fill in the form correctly',
+    'field_required' => 'The field is mandatory.',
+    'choose_one_of_following' => 'Please choose one of the following.',
+    'required' => 'Please enter :field.',
+    'invalid_email_format' => 'The email format is invalid.',
 ];

@@ -5,11 +5,11 @@
     <div class="quoter">
         <div class="container">
             <div class="light-box p-3">
-                <a href="{{ route('home') }}" class="goto-prev-page-link"><i class="bi bi-chevron-left"></i> VOLTAR PARA CASA</a>
+                <a href="{{ route('home') }}" class="goto-prev-page-link text-uppercase"><i class="bi bi-chevron-left"></i> {{ __('global.back_to_homepage') }}</a>
                 <div class="light-box-header my-4">
                     <div class="title text-center">
-                        <h3>COMO PODEMOS AJUDAR VOCÊ?</h3>
-                        <p>esponda algumas perguntas para conhecermos você melhor.</p>
+                        <h3>{{ __('quoter.title') }}</h3>
+                        <p>{{ __('quoter.sub_title') }}</p>
                     </div>
                 </div>
                 <div class="light-box-body px-lg-5 pt-lg-4 pt-md-4 pt-sm-0 pb-md-5 pb-sm-4 pb-3">
@@ -27,8 +27,8 @@
                                             </div>
                                         </div>
                                         <div class="quoter-consultancy-body px-3 px-lg-5 px-md-4 pt-md-2 pt-lg-3 pb-4 pb-lg-5">
-                                            <h2>CONSULTORIA</h2>
-                                            <p>Conheça nossa consultoria especializada em Business Intelligence e saiba como organizar a coleta de dados empresariais da melhor maneira possível.</p>
+                                            <h2>{{ __('quoter.consultancy') }}</h2>
+                                            <p>{{ __('quoter.consultancy_content') }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -50,8 +50,8 @@
                                             </div>
                                         </div>
                                         <div class="quoter-school-body px-3 px-lg-5 px-md-4 pt-md-2 pt-lg-3 pb-4 pb-lg-5">
-                                            <h2>ESCOLA</h2>
-                                            <p>Deseja aprender mais sobre como lidar com os dados e aprimorar o seu conhecimento em BI e Tableau? Conheça nossos cursos disponíveis.</p>
+                                            <h2>{{ __('quoter.school') }}</h2>
+                                            <p>{{ __('quoter.school_content') }}</p>
                                         </div>
                                     </div>
                                 </div>

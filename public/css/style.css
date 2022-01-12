@@ -2271,3 +2271,22 @@ input[type='radio']:checked + .card-box .card-box-body h5 {
   line-height: 30px;
   color: #939496;
 }
+
+.parsley-error {
+  border-color: #ec536c;
+}
+
+.parsley-errors-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.parsley-errors-list.filled {
+  display: block;
+}
+.parsley-errors-list > li {
+  font-size: 15px;
+  list-style: none;
+  color: #ec536c;
+  margin-top: 5px;
+}

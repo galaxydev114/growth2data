@@ -46,21 +46,33 @@
                         <div class="col-12">
                             <div class="footer-bottom-links d-inline-block">
                                 <ul>
-                                    <li><a href="#">Termos e Condições</a></li>
+                                    <li><a href="#">{{ __('footer.terms_and_conditions') }}</a></li>
                                     <li>|</li>
-                                    <li><a href="#">Privacidade</a></li>
+                                    <li><a href="#">{{ __('footer.privacy') }}</a></li>
                                     <li>|</li>
                                     <li><a href="#">Cookies</a></li>
                                     <li>|</li>
-                                    <li><a href="#">&copy; <script>document.write(new Date().getFullYear())</script>, Growth2data, Inc. Todos direitos reservados.</a></li>
+                                    <li><a href="#">&copy; <script>document.write(new Date().getFullYear())</script>, Growth2data, Inc. {{ __('footer.all_rights_reserved') }}</a></li>
                                 </ul>
                             </div>
                             <div class="dropdown language-switch float-end">
-                                <button class="btn btn-secondary dropdown-toggle p-0" type="button" id="language-home" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Português
+                                <button class="btn btn-secondary dropdown-toggle p-0" type="button" id="language-home" data-bs-toggle="dropdown" aria-expanded="false">   
+                                    @if (session()->get('locale') == 'en')
+                                        <img src="{{ asset('img/flags/us.png') }}" width="25px" /> English
+                                    @else
+                                        <img src="{{ asset('img/flags/br.png') }}" width="25px" /> Português
+                                    @endif
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="language-home">
-                                    <li role="presentation"><a class="dropdown-item" role="menuitem">English</a></li>
+                                    @if (session()->get('locale') == 'pt_BR')
+                                    <li role="presentation">
+                                        <a href="{{ url('lang', 'en') }}" class="dropdown-item" role="menuitem"><img src="{{ asset('img/flags/us.png') }}" width="25px" /> English</a>
+                                    </li>
+                                    @else
+                                    <li role="presentation">
+                                        <a href="{{ url('lang', 'pt_BR') }}" class="dropdown-item" role="menuitem"><img src="{{ asset('img/flags/br.png') }}" width="25px" /> Português</a>
+                                    </li>
+                                    @endif
                                 </ul>
                             </div>
                         </div>

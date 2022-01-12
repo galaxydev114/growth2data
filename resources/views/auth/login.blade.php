@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Title -->
-        <title>Login to {{ env('APP_NAME') }}</title>
+        <title>{{ __('auth.login_page_title') }}</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -45,32 +45,32 @@
                                 </div>
                                 <div class="social-logins">
                                     <div class="mt-2">
-                                        <button class="facebook-login-btn"><i class="bi bi-facebook"></i>Log in com Facebook</button>
+                                        <button class="facebook-login-btn"><i class="bi bi-facebook"></i>{{ __('auth.login_with_facebook') }}</button>
                                     </div>
                                     <div class="mt-2">
-                                        <button class="google-login-btn"><i class="bi bi-google"></i>Log in com Google</button>
+                                        <button class="google-login-btn"><i class="bi bi-google"></i>{{ __('auth.login_with_google') }}</button>
                                     </div>
                                     <div class="mt-2">
-                                        <button class="linkedin-login-btn"><i class="bi bi-linkedin"></i>Log in com Linkedin</button>
+                                        <button class="linkedin-login-btn"><i class="bi bi-linkedin"></i>{{ __('auth.login_with_linkedin') }}</button>
                                     </div>
                                 </div>
-                                <div class="or-horizontal-divider my-4"><span>ou</span></div>
+                                <div class="or-horizontal-divider my-4"><span>{{ __('auth.or') }}</span></div>
 
                                 <!-- Main Form -->
-                                <form action="{{ route('login') }}" method="POST" id="login-form">
+                                <form action="{{ route('login') }}" method="POST" id="login-form" data-parsley-validate>
                                     @csrf
                                     <div class="gm-form-group">
-                                        <input type="text" name="username" id="username" class="gm-form-control" placeholder="Email ou username" />
+                                        <input type="text" name="username" id="username" class="gm-form-control" placeholder="{{ __('auth.email_or_username') }}" required data-parsley-required-message="{{ __('auth.email_or_username_required') }}" value="{{ old('username') }}" />
                                     </div>
                                     <div class="gm-form-group mt-4">
-                                        <input type="text" class="gm-form-control" placeholder="Senha" />
+                                        <input type="text" class="gm-form-control" placeholder="{{ __('auth.password') }}" required data-parsley-required-message="{{ __('auth.password_required') }}" />
                                     </div>
                                     <div class="pt-4 d-flex justify-content-between">
-                                        <label class="color-checkbox primary-color">Lembre me
+                                        <label class="color-checkbox primary-color">{{ __('auth.remember_me') }}
                                             <input type="checkbox" name="remember" />
                                             <span class="checkmark"></span>
                                         </label>
-                                        <a href="">Esqueceu senha?</a>
+                                        <a href="">{{ __('auth.forgot_password') }}</a>
                                     </div>
                                     <button type="submit" class="login-btn">Log In</button>
                                 </form>
@@ -78,7 +78,7 @@
 
                                 <div class="or-horizontal-divider mt-4"></div>
                                 <div class="text-center py-3">
-                                    <p>Não tem uma conta G2D? <a href="">Cadastre-se</a></p>
+                                    <p>{{ __('auth.no_g2d_account?') }} <a href="">{{ __('auth.register') }}</a></p>
                                 </div>
                             </div>
                         </div>
@@ -86,54 +86,10 @@
                 </div>
             </div>
         </div>
-        <!-- Vendor JS Files -->
-        <script src="{{ asset('vendor') }}/bootstrap/js/bootstrap.bundle.js"></script>
+
         <!-- jQuery core -->
         <script src="{{ asset('js') }}/jquery-3.6.0.min.js"></script>
-        <!-- Form Validation JS -->
-        <script src="{{ asset('vendor') }}/form-validation/jquery.validate.min.js"></script>
-
-        <script>
-            $(function() {
-                $('form').validate({
-                    rules: {
-                        'name': {
-                            required: true
-                        },
-                        'surname': {
-                            required: true
-                        },
-                        'email': {
-                            required: true,
-                            email: true
-                        },
-                        'telephone': {
-                            required: true
-                        },
-                        'company': {
-                            required: true
-                        },
-                        'description': {
-                            required: true
-                        }
-                    },
-                    messages: {
-                        'name': 'Por favor, insira o nome',
-                        'surname': 'Por favor, insira o sobrenome',
-                        'email': {
-                            'required': 'Por favor insira o email',
-                            'email': "Por favor insira um endereço de e-mail válido"
-                        },
-                        'telephone': 'Por favor insira o telefone',
-                        'company': 'Por favor, insira a empresa',
-                        'description': 'Por favor insira a descrição' 
-                    },
-                    submitHandler: function(form) {
-                        $('.bs-spinner').removeClass('d-none');
-                        form.submit();
-                    }
-                });
-            });
-        </script>
+        <!-- Vendor JS Files -->
+        <script src="{{ asset('vendor') }}/parsleyjs/parsley.min.js"></script>
     </body>
 </html>

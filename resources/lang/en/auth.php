@@ -1,20 +1,17 @@
 <?php
 
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used during authentication for various
-    | messages that we need to display to the user. You are free to modify
-    | these language lines according to your application's requirements.
-    |
-    */
-
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'login_page_title' => 'Login to Growth2data',
+    'login_with_facebook' => 'Log in with Facebook',
+    'login_with_google' => 'Log in with Google',
+    'login_with_linkedin' => 'Log in with Linkedin',
+    'or' => 'or',
+    'email_or_username' => 'Email or username',
+    'email_or_username_required' => 'Please enter email/username',
+    'password' => 'Password',
+    'password_required' => 'Please enter password.',
+    'remember_me' => 'Remember me',
+    'forgot_password' => 'Forgot password?',
+    "no_g2d_account?" => "Don't have a G2D account?",
+    'register' => 'Register',
 ];

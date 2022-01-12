@@ -1,11 +1,11 @@
-@extends('layouts.simple_app', ['title' => 'Consultoria Serviço', 'page' => 'consultanty_service'])
+@extends('layouts.simple_app', ['title' => __('consultancy_service.page_title'), 'page' => 'consultanty_service'])
 
 @section('content')
 <div class="gradient-primary" style="min-height: 100vh">
     <div class="consultancy-service">
         <div class="container">
             <div class="light-box p-3">
-                <a href="{{ route('home') }}" class="goto-prev-page-link"><i class="bi bi-chevron-left"></i> VOLTAR PARA CASA</a>
+                <a href="{{ route('home') }}" class="goto-prev-page-link"><i class="bi bi-chevron-left"></i> {{ __('global.back_to_homepage') }}</a>
                 <div class="light-box-header my-4">
                     <div class="title text-center">
                         <div class="increase-icon">
@@ -14,17 +14,17 @@
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M60 7.5C60 6.11929 61.1193 5 62.5 5H72.5C73.8807 5 75 6.11929 75 7.5V17.5C75 18.8807 73.8807 20 72.5 20C71.1193 20 70 18.8807 70 17.5V13.0671L51.6609 29.3685C50.8316 30.1056 49.6158 30.208 48.675 29.62L29.9252 17.9014L8.71407 29.6854C7.50712 30.3559 5.98511 29.9211 5.31457 28.7141C4.64404 27.5071 5.0789 25.9851 6.28586 25.3146L28.7859 12.8146C29.5811 12.3728 30.5535 12.3979 31.325 12.88L49.7379 24.3881L65.9245 10H62.5C61.1193 10 60 8.88071 60 7.5Z" fill="#939496"/>
                             </svg>
                         </div>
-                        <h3 id="main-title">CONSULTORIA</h3>
-                        <h4 id="bi-q-title" class="d-none">Solução em Business Intelligence</h4>
-                        <h4 id="bd-q-title" class="d-none">Solução em Base de Dados</h4>
-                        <h4 id="app-q-title" class="d-none">Aplicativo</h4>
+                        <h3 id="main-title">{{ __('consultancy_service.main_title') }}</h3>
+                        <h4 id="bi-q-title" class="d-none">{{ __('consultancy_service.sub_title_1') }}</h4>
+                        <h4 id="bd-q-title" class="d-none">{{ __('consultancy_service.sub_title_2') }}</h4>
+                        <h4 id="app-q-title" class="d-none">{{ __('consultancy_service.sub_title_3') }}</h4>
                         <div id="contact-detail-form-title" class="d-none">
-                            <h3>Seus dados para contato</h3>
-                            <h5>Estamos quase lá!</h5>
+                            <h3>{{ __('consultancy_service.your_contact_details') }}</h3>
+                            <h5>{{ __('consultancy_service.you_are_almost_there') }}</h5>
                         </div>
                         <div id="profile-title" class="d-none">
-                            <h3>Desenvolvimento de Dashboards</h3>
-                            <h5>Só mais uma coisa: com qual descrição você se identifica?</h5>
+                            <h3>{{ __('consultancy_service.dashboard_development') }}</h3>
+                            <h5>{{ __('consultancy_service.one_more_thing') }}</h5>
                         </div>
                     </div>
                 </div>
@@ -41,10 +41,10 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
                                                         <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                                     </svg>
-                                                    <div>Escolha um dos abaixo</div>
+                                                    <div>{{ __('consultancy_service.choose_one_of_below') }}</div>
                                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                                 </div>
-                                                <h4>Escolha o serviço que você precisa:</h4>
+                                                <h4>{{ __('consultancy_service.choose_the_service_you_need') }}</h4>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-center">
@@ -52,25 +52,25 @@
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="interest" value="1" />
-                                                        <span>Soluções em Business Intelligence</span>
+                                                        <span>{{ __('consultancy_service.business_intelligence_service') }}</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="interest" value="2" />
-                                                        <span>Soluções em Base de Dados</span>
+                                                        <span>{{ __('consultancy_service.database_solutions') }}</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="interest" value="3" />
-                                                        <span>Aplicativos</span>
+                                                        <span>{{ __('consultancy_service.apps') }}</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="interest" value="4" />
-                                                        <span>Sites</span>
+                                                        <span>{{ __('consultancy_service.sites') }}</span>
                                                     </label>
                                                 </li>
                                             </ul>
@@ -93,24 +93,24 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
                                                         <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                                     </svg>
-                                                    <div>Por favor, preencha o formulário corretamente</div>
+                                                    <div>{{ __('validation.fill_form') }}</div>
                                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="service-item" data-alias="dashboards_amt">
-                                            <h4 class="text-center">Quantos dashboards você precisa desenvolver?</h4>
+                                            <h4 class="text-center">{{ __('consultancy_service.how_many_dashboards') }}</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="dashboards_amt" value="1-3" />
-                                                        <span>1 a 3</span>
+                                                        <span>1 {{ __('global.to') }} 3</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="dashboards_amt" value="4-10" />
-                                                        <span>4 a 10</span>
+                                                        <span>4 {{ __('global.to') }} 10</span>
                                                     </label>
                                                 </li>
                                                 <li>
@@ -120,10 +120,10 @@
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="error text-center d-none">O campo é obrigatório.</div>
+                                            <div class="error text-center d-none">{{ __('validation.field_required') }}</div>
                                         </div>
                                         <div class="service-item" data-alias="data_sources_amt">
-                                            <h4 class="text-center">Quantas fontes de dados você tem?</h4>
+                                            <h4 class="text-center">{{ __('consultancy_service.how_many_data_sources') }}</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
@@ -134,7 +134,7 @@
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="data_sources_amt" value="2-3" />
-                                                        <span>2 a 3</span>
+                                                        <span>2 {{ __('global.to') }} 3</span>
                                                     </label>
                                                 </li>
                                                 <li>
@@ -144,25 +144,25 @@
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="error text-center d-none">O campo é obrigatório.</div>
+                                            <div class="error text-center d-none">{{ __('global.field_required') }}</div>
                                         </div>
                                         <div class="service-item" data-alias="data_engineering_amt">
-                                            <h4 class="text-center">Você precisa de ajuda com a engenharia dos dados?</h4>
+                                            <h4 class="text-center">{{ __('consultancy_service.do_you_need_help') }}</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="data_engineering_amt" value="yes" />
-                                                        <span>Sim</span>
+                                                        <span>{{ __('global.yes') }}</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="data_engineering_amt" value="no" />
-                                                        <span>Não</span>
+                                                        <span>{{ __('global.no') }}</span>
                                                     </label>
                                                 </li>
                                             </ul>
-                                            <div class="error text-center d-none">O campo é obrigatório.</div>
+                                            <div class="error text-center d-none">{{ __('validation.field_required') }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -182,24 +182,24 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
                                                         <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                                     </svg>
-                                                    <div>Por favor, escolha um dos seguintes</div>
+                                                    <div>{{ __('validation.choose_one_of_following') }}</div>
                                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="service-item">
-                                            <h4 class="text-center">Você já tem a ideia de seu aplicativo?</h4>
+                                            <h4 class="text-center">{{ __('consultancy_service.have_an_idea_for_app') }}</h4>
                                             <ul class="list-unstyled d-flex flex-wrap justify-content-center">
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="app_service_type" value="1" />
-                                                        <span>Sim, preciso apenas que seja desenvolvido!</span>
+                                                        <span>{{ __('consultancy_service.need_it_develop') }}</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label class="color-radio primary">
                                                         <input type="radio" name="app_service_type" value="2" />
-                                                        <span>Não, preciso de ajuda para elaborá-la!</span>
+                                                        <span>{{ __('consultancy_service.need_help_making') }}</span>
                                                     </label>
                                                 </li>
                                             </ul>
@@ -216,13 +216,13 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="gm-form-group">
-                                        <label for="name">Nome</label>
+                                        <label for="name" class="text-capitalize">{{ __('global.name') }}</label>
                                         <input type="text" name="name" id="name" class="gm-form-control" />
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="gm-form-group">
-                                        <label for="surname">Sobrenome</label>
+                                        <label for="surname" class="text-capitalize">{{ __('global.surname') }}</label>
                                         <input type="text" name="surname" id="surname" class="gm-form-control" />
                                     </div>
                                 </div>
@@ -234,19 +234,19 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="gm-form-group">
-                                        <label for="telephone">Telefone</label>
+                                        <label for="telephone" class="text-capitalize">{{ __('global.telephone') }}</label>
                                         <input type="text" name="telephone" id="telephone" class="gm-form-control" />
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="gm-form-group">
-                                        <label for="company">Empresa</label>
+                                        <label for="company" class="text-capitalize">{{ __('global.company') }}</label>
                                         <input type="text" name="company" id="company" class="gm-form-control" />
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="gm-form-group">
-                                        <label for="description">Comentários que você considera relevantes</label>
+                                        <label for="description">{{ __('global.comments_you_consider_relevant') }}</label>
                                         <textarea name="description" id="description" class="gm-form-control" rows="3"></textarea>
                                     </div>
                                 </div>
@@ -263,7 +263,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
                                             <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                         </svg>
-                                        <div>Por favor, escolha um dos seguintes</div>
+                                        <div>{{ __('validation.choose_one_of_following') }}</div>
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div>
                                 </div>
@@ -274,11 +274,11 @@
                                         <input type="radio" name="dashboard_type" id="radio_1" value="1" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
-                                                <h5>Inteligente, prescritivo e prefere pistas visuais.</h5>
+                                                <h5>{{ __('consultancy_service.dashboard_type_1_title') }}</h5>
                                             </div>
                                             <div class="card-box-body">
-                                                <h5>TIPO DE DASHBOARD</h5>
-                                                <p>Ferramentas de tomada de decisões.</p>
+                                                <h5>{{ __('consultancy_service.dashboard_type') }}</h5>
+                                                <p>{{ __('consultancy_service.dashboard_type_1_text') }}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -288,11 +288,11 @@
                                         <input type="radio" name="dashboard_type" id="radio_2" value="2" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
-                                                <h5>Previdente, tático, confiante.</h5>
+                                                <h5>{{ __('consultancy_service.dashboard_type_2_title') }}</h5>
                                             </div>
                                             <div class="card-box-body">
-                                                <h5>TIPO DE DASHBOARD</h5>
-                                                <p>Estilo alerta.</p>
+                                                <h5>{{ __('consultancy_service.dashboard_type') }}</h5>
+                                                <p>{{ __('consultancy_service.dashboard_type_2_text') }}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -302,11 +302,11 @@
                                         <input type="radio" name="dashboard_type" id="radio_3" value="3" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
-                                                <h5>Descritivo, minimalista, social.</h5>
+                                                <h5>{{ __('consultancy_service.dashboard_type_3_title') }}</h5>
                                             </div>
                                             <div class="card-box-body">
-                                                <h5>TIPO DE DASHBOARD</h5>
-                                                <p>Insights automáticos.</p>
+                                                <h5>{{ __('consultancy_service.dashboard_type') }}</h5>
+                                                <p>{{ __('consultancy_service.dashboard_type_3_text') }}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -316,11 +316,11 @@
                                         <input type="radio" name="dashboard_type" id="radio_4" value="4" hidden />
                                         <div class="card-box text-center">
                                             <div class="card-box-top">
-                                                <h5>Confiável, simples, honesto.</h5>
+                                                <h5>{{ __('consultancy_service.dashboard_type_4_title') }}</h5>
                                             </div>
                                             <div class="card-box-body">
-                                                <h5>TIPO DE DASHBOARD</h5>
-                                                <p>Tabelas de texto.</p>
+                                                <h5>{{ __('consultancy_service.dashboard_type') }}</h5>
+                                                <p>{{ __('consultancy_service.dashboard_type_4_text') }}</p>
                                             </div>
                                         </div>
                                     </label>
@@ -330,9 +330,9 @@
                     </div>
                     <div class="light-box-footer">
                         <div class="text-center mt-lg-3 mb-3">
-                            <button type="button" id="prev" class="btn outline-btn primary me-3 d-none">VOLTAR</button>
-                            <button type="button" id="next" class="btn outline-btn primary">PRÓXIMA</button>
-                            <button type="submit" id="submit" class="btn outline-btn primary d-none"><span class="bs-spinner spinner-border spinner-border-sm d-none"></span>ENVIAR</button>
+                            <button type="button" id="prev" class="btn outline-btn primary me-3 d-none">{{ __('global.back') }}</button>
+                            <button type="button" id="next" class="btn outline-btn primary">{{ __('global.next') }}</button>
+                            <button type="submit" id="submit" class="btn outline-btn primary d-none"><span class="bs-spinner spinner-border spinner-border-sm d-none"></span>{{ __('global.submit') }}</button>
                         </div>
                     </div>
                 </form>
@@ -463,15 +463,15 @@
                 }
             },
             messages: {
-                'name': 'Por favor, insira o nome',
-                'surname': 'Por favor, insira o sobrenome',
+                'name': "{{ __('validation.required', ['field' => __('global.name')]) }}",
+                'surname': "{{ __('validation.required', ['field' => __('global.surname')]) }}",
                 'email': {
-                    'required': 'Por favor insira o email',
-                    'email': "Por favor insira um endereço de e-mail válido"
+                    'required': "{{ __('validation.required', ['field' => 'email']) }}",
+                    'email': "{{ __('validation.invalid_email_format') }}"
                 },
-                'telephone': 'Por favor insira o telefone',
-                'company': 'Por favor, insira a empresa',
-                'description': 'Por favor insira a descrição'
+                'telephone': "{{ __('validation.required', ['field' => __('global.telephone')]) }}",
+                'company': "{{ __('validation.required', ['field' => __('global.company')]) }}",
+                'description': "{{ __('validation.required', ['field' => __('global.description')]) }}"
             },
             submitHandler: function(form) {
                 $('.bs-spinner').removeClass('d-none');
