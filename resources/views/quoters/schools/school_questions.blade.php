@@ -98,6 +98,7 @@
                                             <div class="gm-form-group mb-3">
                                                 <input type="text" name="location" class="gm-form-control" />
                                             </div>
+                                            <div class="error text-center">O campo é obrigatório.</div>
                                         </div>
                                         <div class="question-school-option mt-4">
                                             <h4 class="quoter-question-title text-center">Qual formato de treinamento você prefere?</h4>
@@ -124,7 +125,6 @@
                     </div>
                     <div class="light-box-footer">
                         <div class="text-center mt-lg-3 mb-3">
-                            <button type="button" id="prev" class="btn outline-btn primary me-3 d-none">VOLTAR</button>
                             <button type="button" id="next" class="btn outline-btn primary">PRÓXIMA</button>
                             <button type="submit" id="submit" class="btn outline-btn primary d-none"><span class="bs-spinner spinner-border spinner-border-sm d-none"></span>ENVIAR</button>
                         </div>
@@ -137,4 +137,9 @@
 @endsection
 
 @push('js')
+<script>
+    $('#next').on('click', function () {
+        
+    });
+</script>
 @endpush

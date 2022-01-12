@@ -6,10 +6,10 @@
         </a>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto {{ (request()->segment(1) == 'planos-clube') ? 'active' : '' }}" href="{{ route('subscription.plan') }}">Clube de conteúdo</a></li>
-                <li><a class="nav-link scrollto" href="#hero">Consultoria</a></li>
-                <li><a href="{{ route('school') }}" class="nav-link scrollto {{ (request()->segment(1) == 'escola') ? 'active' : '' }}" href="#hero">Escola</a></li>
-                <li class="dropdown"><a href="#"><span>E-Learning</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto {{ (request()->segment(1) == 'planos-clube') ? 'active' : '' }}" href="{{ route('subscription.plan') }}">{{ __('nav.content_club') }}</a></li>
+                <li><a class="nav-link scrollto" href="{{ url('consultoria-servico') }}">{{ __('nav.consultancy') }}</a></li>
+                <li><a href="{{ route('school') }}" class="nav-link scrollto {{ (request()->segment(1) == 'escola') ? 'active' : '' }}" href="{{ route('school') }}">{{ __('nav.school') }}</a></li>
+                <li class="dropdown"><a href="#"><span>{{ __('nav.e-learning') }}</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="#">Lorem ipsum</a></li>
                         <li class="dropdown"><a href="#"><span>Lorem ipsum</span> <i class="bi bi-chevron-right"></i></a>
@@ -23,8 +23,8 @@
                         <li><a href="#">Lorem ipsum</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ route('contact') }}" class="nav-link scrollto {{ (request()->segment(1) == 'contato') ? 'active' : '' }}">Contato</a></li>
-                <li><a class="login-btn scrollto" href="{{ route('login') }}">Log In</a></li>
+                <li><a href="{{ route('contact') }}" class="nav-link scrollto {{ (request()->segment(1) == 'contato') ? 'active' : '' }}">{{ __('nav.contact') }}</a></li>
+                <li><a class="login-btn scrollto" href="{{ route('login') }}">{{ __('nav.login') }}</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

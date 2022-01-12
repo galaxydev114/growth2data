@@ -1,12 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\LocalizationController;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Quoters\ConsultanciesController;
 use App\Http\Controllers\ContactsController;
 
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,3 +103,5 @@ Route::prefix('admin')->group(function() {
 
     Route::get('dashboard', DashboardController::class)->name('admin.dashboard');
 });
+
+Route::get('lang/{locale}', LocalizationController::class);

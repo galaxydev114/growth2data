@@ -8,11 +8,11 @@
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
                     <div class="hero-left-content pt-md-4 text-left">
-                        <h1 data-aos="fade-up">Consultoria em Business Intelligence, Big Data, Soluções Digitais e Treinamentos</h1>
-                        <h2 data-aos="fade-up" data-aos-delay="400">Temos a solução mais inteligente para você e para seu negócio</h2>
+                        <h1 data-aos="fade-up">{{ __('home.hero_title') }}</h1>
+                        <h2 data-aos="fade-up" data-aos-delay="400">{{ __('home.hero_subtitle') }}</h2>
                         <div data-aos="fade-up" data-aos-delay="600">
                             <a href="{{ route('quoter') }}" class="gx-animation-pulse-grow btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                                <span>ENCONTRE O QUE PRECISA</span>
+                                <span>{{ __('home.find_what_you_need') }}</span>
                             </a>
                         </div>
                     </div>
@@ -31,11 +31,9 @@
         <div class="row gx-0">
             <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="content">
-                    <h2>Sobre a G2D</h2>
+                    <h2>{{ __('home.about_g2d') }}</h2>
                     <p>
-                        A <a href="javascript:void(0)">Growth2Data</a> nasceu da união de profissionais dedicados com experiência em empresas multinacionais de pequeno, médio e grande porte. Com seriedade e profissionalismo, ao longo de mais de 10 anos, desenvolvemos competências essenciais para o mercado de Business Intelligence.
-                        Com a <a href="quoter.html">G2D Consultoria</a>, temos a missão de ajudar pessoas e empresas a transformarem dados em insights poderosos. Para isso, oferecemos soluções nas áreas de TI, com foco em Business Intelligence e Banco de Dados e levamos para a sua empresa as melhores práticas de mercado, considerando as necessidades específicas do seu negócio.
-                        Buscando disseminar nosso conhecimento e capacitar profissionais, desenvolvemos o <a href="quoter.html">G2D Training Center</a> para oferecer treinamentos exclusivos nas áreas de Business Intelligence. Nossos cursos são ministrados por profissionais extremamente talentosos e especialistas nas mais diversas áreas de Business Intelligence e tecnologia.
+                        {{ __('home.about_content_part_1') }} <a href="javascript:void(0)">Growth2Data</a> {{ __('home.about_content_part_2') }} <a href="{{ url('consultoria-servico') }}">G2D {{ __('home.about_content_part_consultancy') }}</a>, {{ __('home.about_content_part_3') }} <a href="quoter.html">G2D Training Center</a> {{ __('home.about_content_part_4') }}
                     </p>
                 </div>
             </div>
@@ -48,13 +46,13 @@
 
 <!-- ======= Services ======= -->
 <section id="service" class="service">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
         <div class="row mx-lg-5 justify-content-center">
             <div class="col-lg-6 px-lg-5 py-5 position-relative service-item">
                 <a href="">
                     <div class="service-item-content">
-                        <h3>CONSULTORIA</h3>
-                        <p>Conheça nossa consultoria especializada em Business Intelligence e saiba como organizar a coleta de dados empresariais da melhor maneira possível.</p>
+                        <h3>{{ __('home.consultancy_block_title') }}</h3>
+                        <p>{{ __('home.consultancy_block_content') }}</p>
                     </div>
                     <!-- Color cover -->
                     <div class="color-cover">
@@ -67,8 +65,8 @@
             <div class="col-lg-6 px-lg-5 py-5 position-relative service-item">
                 <a href="">
                     <div class="service-item-content">
-                        <h3>ESCOLA</h3>
-                        <p>Deseja aprender mais sobre como lidar com os dados e aprimorar o seu conhecimento em BI e Tableau? Conheça nossos cursos disponíveis.</p>
+                        <h3>{{ __('home.school_block_title') }}</h3>
+                        <p>{{ __('home.school_block_content') }}</p>
                     </div>
                     <!-- Color cover -->
                     <div class="color-cover">
@@ -84,12 +82,12 @@
 
 <!-- ======= Team Section ====== -->
 <section id="team" class="team">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
         <header class="section-header">
-            <h2>Nosso Time</h2>
+            <h2>{{ __('home.our_team') }}</h2>
         </header>
         <div class="row gy-5 justify-content-center">
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
                         <img src="{{ asset('img') }}/team/member_1.jpg" class="img-fluid" alt="" />
@@ -106,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
                         <img src="{{ asset('img') }}/team/member_2.jpg" class="img-fluid" alt="" />
@@ -123,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
                         <img src="{{ asset('img') }}/team/member_3.jpg" class="img-fluid" alt="" />
@@ -140,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
                         <img src="{{ asset('img') }}/team/member_4.jpg" class="img-fluid" alt="" />
@@ -157,7 +155,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                 <div class="member">
                     <div class="member-img">
                         <img src="{{ asset('img') }}/team/member_5.jpg" class="img-fluid" alt="" />
@@ -180,9 +178,9 @@
 
 <!-- ======= Clients Section ======= -->
 <section id="clients" class="clients">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
         <header class="section-header">
-            <h2>Nossos clientes</h2>
+            <h2>{{ __('home.our_clients') }}</h2>
         </header>
         <div class="clients-slider swiper">
             <div class="swiper-wrapper align-items-center">

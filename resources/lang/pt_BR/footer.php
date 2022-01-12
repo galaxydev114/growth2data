@@ -1,0 +1,20 @@
+<?php
+return [
+    'consultancy' => 'Consultoria',
+    'business_intelligence' => 'Business Intelligence',
+    'big_data' => 'Big Data',
+    'digital_solutions' => 'Soluções Digitais',
+    'school' => 'Escola',
+    'power_bi_training' => 'Treinamento Power BI',
+    'tableau_training' => 'Treinamento Tableau',
+    'python_training' => 'Treinamento  Python',
+    'sql_training' => 'Treinamento  SQL',
+    'about_g2d' => 'Sobre a G2D',
+    'contact' => 'Contato',
+    'content_club' => 'Clube de Conteúdo',
+    'subscribe' => 'Inscreva-se',
+    'subscribe_text' => 'Inscreva-se para ficar por dentro das novidades do BLOG e muito mais sobre os mais diversos assuntos das áreas de Tecnologia da Informação.',
+    'terms_and_conditions' => 'Termos e Condições',
+    'privacy' => 'Privacidade',
+    'all_rights_reserved' => 'Todos direitos reservados.',
+];
